@@ -5,11 +5,14 @@ using UnityEngine;
 public class UIMgr : MonoBehaviour
 {
     public static UIMgr I;
+    public UI_GameStart ui_GameStart;
 
-    private void Awake()
+   
+
+    void Awake()
     {
         I = this;
-
+        ui_GameStart.Init();
 
     }
     // Start is called before the first frame update
