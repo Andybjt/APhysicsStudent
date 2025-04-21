@@ -2,25 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameMgr : MonoBehaviour
+public class Lvl_02 : MonoBehaviour
 {
-    public static GameMgr I;
-    public Lvl_01 lvl_01;
-    public Lvl_02 lvl_02;
-
-    private void Awake()
+    public void Init()
     {
-        I = this;
-
-        lvl_01.Init();
-        lvl_02.Init();
-
+        this.gameObject.SetActive(false);
     }
-
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-            
+      
     }
 
     // Update is called once per frame
