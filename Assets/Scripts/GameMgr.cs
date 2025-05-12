@@ -7,13 +7,18 @@ public class GameMgr : MonoBehaviour
     public static GameMgr I;
     public Lvl_01 lvl_01;
     public Lvl_02 lvl_02;
+    public Player player;
 
     private void Awake()
     {
         I = this;
 
+        player.Init();
+
         lvl_01.Init();
         lvl_02.Init();
+        
+
 
     }
 

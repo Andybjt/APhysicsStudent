@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -12,7 +13,8 @@ public class UI_GameStart : MonoBehaviour
     public Transform teacher;
     public Transform student;
     public Transform mate;
-    
+
+ 
 
     public void Init()
     {
@@ -22,6 +24,8 @@ public class UI_GameStart : MonoBehaviour
         btn_start.onClick.AddListener(()=>
         {
             this.gameObject.SetActive(false);
+            GameMgr.I.lvl_01.Show();
+            GameMgr.I.player.Show();
         });
 
         btn_option.onClick.AddListener(() =>
@@ -37,7 +41,13 @@ public class UI_GameStart : MonoBehaviour
         DOTween.Sequence()
             .AppendInterval(1.5f)
             .Append(teacher.DOLocalMoveX(-334, 0.8f))
-            .Append(mate.DOLocalMoveY(-77, 0.2f));
+            .Append(mate.DOLocalMoveY(-77, 0.2f))
+            .Append(title.DOLocalMoveY(286, 1.2f));
+    }
+
+    private void Append(DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> tweenerCore)
+    {
+        throw new NotImplementedException();
     }
 
     // Start is called before the first frame update
