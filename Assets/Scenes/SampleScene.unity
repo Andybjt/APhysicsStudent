@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 42885889}
   - component: {fileID: 42885890}
   - component: {fileID: 42885891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvl_01: {fileID: 1986446899}
   lvl_02: {fileID: 519966876}
-  player: {fileID: 1635887886}
+  player: {fileID: 1429658690}
 --- !u!1 &297960768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1812,7 @@ GameObject:
   - component: {fileID: 1429658687}
   - component: {fileID: 1429658689}
   - component: {fileID: 1429658688}
+  - component: {fileID: 1429658690}
   m_Layer: 0
   m_Name: PlayerImg
   m_TagString: Untagged
@@ -1953,6 +1954,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0225, y: 2.02}
   m_EdgeRadius: 0
+--- !u!114 &1429658690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429658684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95b692eaf0893846afcca13a86e518d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpForce: 25
+  animator: {fileID: 1429658687}
+  isGround: 0
+  rb: {fileID: 1429658688}
 --- !u!1 &1480354705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,7 +2056,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635887885}
-  - component: {fileID: 1635887886}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2062,20 +2079,6 @@ Transform:
   m_Father: {fileID: 163999363}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1635887886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635887884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e95b692eaf0893846afcca13a86e518d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  animator: {fileID: 1429658687}
 --- !u!1 &1790821412
 GameObject:
   m_ObjectHideFlags: 0
